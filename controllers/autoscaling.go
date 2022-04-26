@@ -140,19 +140,26 @@ func (r *HorizontalRunnerAutoscalerReconciler) suggestReplicasByQueuedAndInProgr
 		} else {
 		JOB:
 			for _, job := range allJobs {
-				labels := make(map[string]struct{}, len(job.Labels))
-				for _, l := range job.Labels {
-					labels[l] = struct{}{}
-				}
-
-				if _, ok := labels["self-hosted"]; !ok {
-					continue JOB
-				}
-
+				runnerLabels := make(map[string]struct{}, len(st.labels))
 				for _, l := range st.labels {
-					if _, ok := labels[l]; !ok {
+					runnerLabels[l] = struct{}{}
+				}
+
+				var selfHostedRunnerRequested bool
+
+				for _, l := range job.Labels {
+					if l == "self-hosted" {
+						selfHostedRunnerRequested = true
+						continue
+					}
+
+					if _, ok := runnerLabels[l]; !ok {
 						continue JOB
 					}
+				}
+
+				if !selfHostedRunnerRequested {
+					continue JOB
 				}
 
 				switch job.GetStatus() {
