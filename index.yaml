@@ -17,8 +17,8 @@ entries:
     - https://github.com/hudl/hudl-actions-runner-controller
     type: application
     urls:
-    - https://github.com/hudl/hudl-actions-runner-controller/releases/download/actions-runner-controller-0.17.4/actions-runner-controller-0.17.4.tar.gz
-    version: 0.17.5
+    - https://github.com/hudl/hudl-actions-runner-controller/releases/download/actions-runner-controller-0.17.4/actions-runner-controller-0.18.0.tar.gz
+    version: 0.18.0
   - apiVersion: v2
     appVersion: 0.22.2
     created: "2022-04-27T09:16:27.107302376Z"
