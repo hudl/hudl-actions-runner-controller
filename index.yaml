@@ -18,6 +18,24 @@ entries:
     type: application
     urls:
     - https://github.com/hudl/hudl-actions-runner-controller/releases/download/actions-runner-controller-0.17.4/actions-runner-controller-0.17.4.tar.gz
+    version: 0.17.5
+  - apiVersion: v2
+    appVersion: 0.22.2
+    created: "2022-04-27T09:16:27.107302376Z"
+    description: A Kubernetes controller that operates self-hosted runners for GitHub
+      Actions on your Kubernetes cluster.
+    digest: 373034a1ec8bb996cc33c2c22355a6699dc45c5c3cf74cc7ecf0b49d047e0776
+    home: https://github.com/hudl/hudl-actions-runner-controller
+    maintainers:
+    - name: hudl
+      url: https://github.com/hudl
+    
+    name: actions-runner-controller
+    sources:
+    - https://github.com/hudl/hudl-actions-runner-controller
+    type: application
+    urls:
+    - https://github.com/hudl/hudl-actions-runner-controller/releases/download/actions-runner-controller-0.17.4/actions-runner-controller-0.17.4.tar.gz
     version: 0.17.4
   - apiVersion: v2
     appVersion: 0.22.2
